@@ -31,8 +31,6 @@ ynh_remove_logrotate
 
 ynh_remove_nodejs
 
-ynh_redis_remove_db "$redis_db"
-
 # Remove the dedicated NGINX config
 ynh_remove_nginx_config
 
