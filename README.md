@@ -28,7 +28,7 @@ If you want to install Etherpad with plugins and mysql database: https://github.
 
 ## Screenshots
 
-![Screenshot of Etherpad](./doc/screenshots/etherpad.gif)
+![Screenshot of Etherpad](./doc/screenshots/screenshot.png)
 
 ## Documentation and resources
 

@@ -28,7 +28,7 @@ Si vous souhaitez installer Etherpad avec les plugins et la base de données mys
 
 ## Captures d’écran
 
-![Capture d’écran de Etherpad](./doc/screenshots/etherpad.gif)
+![Capture d’écran de Etherpad](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
