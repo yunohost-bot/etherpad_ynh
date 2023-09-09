@@ -38,4 +38,4 @@ sleep 120
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Change of URL completed for Etherpad" --last
+ynh_script_progression --message="Change of URL completed for $app" --last

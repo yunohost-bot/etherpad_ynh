@@ -30,7 +30,7 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 # INSTALL ETHERPAD
 #=================================================
-ynh_script_progression --message="Installing Etherpad..." --weight=60
+ynh_script_progression --message="Installing $app..." --weight=60
 
 pushd $install_dir
  	ynh_use_nodejs
@@ -40,12 +40,12 @@ popd
 #=================================================
 # MODIFY A CONFIG FILE
 #=================================================
-ynh_script_progression --message="Configuring Etherpad..." --weight=6
+ynh_script_progression --message="Configuring $app..." --weight=6
 
-cp ../conf/settings.json $install_dir/settings.json
+ynh_add_config --template="../conf/settings.json" --destination="$install_dir/settings.json"
+chmod 400 "$install_dir/settings.json"
+chown $app:$app "$install_dir/settings.json"
 
-ynh_replace_string --match_string="__PORT__" --replace_string="$port" --target_file="$install_dir/settings.json"
-ynh_replace_string --match_string="__LANGUAGE__" --replace_string="$language" --target_file="$install_dir/settings.json"
 if [ "$export" = "abiword" ]
 then
 	# Get AbiWord binary path
@@ -62,8 +62,8 @@ fi
 ynh_store_file_checksum --file="$install_dir/settings.json"
 
 ynh_add_config --template="../conf/credentials.json" --destination="$install_dir/credentials.json"
-
-chmod 400 $install_dir/credentials.json
+chmod 400 "$install_dir/credentials.json"
+chown $app:$app "$install_dir/credentials.json"
 
 #=================================================
 # SETUP SYSTEMD
