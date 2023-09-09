@@ -32,7 +32,7 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir" --keep="$install_dir/settings.json $install_dir/credentials.json"
+	ynh_setup_source --dest_dir="$install_dir" --keep="settings.json credentials.json"
 fi
 
 chmod -R o-rwx "$install_dir"
@@ -63,10 +63,7 @@ ynh_script_progression --message="Installing $app..." --weight=90
 
 pushd $install_dir
  	ynh_use_nodejs
- 	#ynh_exec_warn_less ynh_exec_as $app env "$ynh_node_load_PATH" src/bin/run.sh
  	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH bin/installDeps.sh
-	#ynh_exec_warn_less ynh_exec_as $app env "$ynh_node_load_PATH" npm cache clean --force
-	#ynh_exec_warn_less ynh_exec_as $app env "$ynh_node_load_PATH" npm install --upgrade 
 popd
 
 #=================================================
