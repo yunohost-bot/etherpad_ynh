@@ -1,5 +1,5 @@
 [Unit]
-Description=Etherpad-lite: Collaborative editor
+Description=Etherpad-lite: collaborative editor
 After=syslog.target network.target postgresql.service
 
 [Service]
