@@ -78,7 +78,7 @@ ram.runtime = "50M"
     admin.show_tile = false
 
     [resources.apt]
-    packages = "mariadb-server"
+    packages = ""
     
     packages_from_raw_bash = """
           if [[ "$export" == "libreoffice" ]]
