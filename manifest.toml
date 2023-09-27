@@ -75,6 +75,7 @@ ram.runtime = "50M"
     admin.url = "/admin"
     admin.allowed = ["admins"]
     admin.auth_header = false
+    admin.show_tile = false
 
     [resources.apt]
     packages = "mariadb-server"
