@@ -19,7 +19,12 @@ ynh_restore_file --origin_path="$install_dir"
 # Restore permissions on app files
 chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
-chmod 400 $install_dir/credentials.json
+
+chmod 600 "$install_dir/settings.json"
+chown $app:$app "$install_dir/settings.json"
+
+chmod 600 "$install_dir/credentials.json"
+chown $app:$app "$install_dir/credentials.json"
 
 #=================================================
 # REINSTALL DEPENDENCIES
