@@ -5,7 +5,7 @@ name = "Etherpad"
 description.en = "Online editor providing collaborative editing in real-time"
 description.fr = "Éditeur en ligne fournissant l'édition collaborative en temps réel"
 
-version = "1.9.4~ynh1"
+version = "1.9.6~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -20,8 +20,11 @@ code = "https://github.com/ether/etherpad-lite"
 yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = true
+
 sso = true
+
 disk = "50M"
 ram.build = "2G"
 ram.runtime = "50M"
@@ -50,7 +53,7 @@ ram.runtime = "50M"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
     choices = ["ca", "de", "en", "es", "fr", "gl", "hu", "it", "nl", "pt"]
-    default = "en"
+    default = "fr"
 
     [install.admin]
     type = "user"
@@ -60,8 +63,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/ether/etherpad-lite/archive/refs/tags/v1.9.4.tar.gz"
-        sha256 = "5b8ccf2a3c92cbd9bb578f684bc52d2ea27fc3fb30cdc76341f9ccffe0c0ff7f"
+        url = "https://github.com/ether/etherpad-lite/archive/refs/tags/v1.9.6.tar.gz"
+        sha256 = "cd0cb2c9c2c4a8f93972b3f5913ff00cd3733c732195df293c8f56f3ce0a018f"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
