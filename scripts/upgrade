@@ -57,7 +57,7 @@ fi
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
-	# Download, check integrity, uncompress and patch the source from app.src
+
 	ynh_setup_source --dest_dir="$install_dir" --keep="settings.json credentials.json"
 fi
 
@@ -110,7 +110,7 @@ chown $app:$app "$install_dir/credentials.json"
 #=================================================
 # INSTALL ETHERPAD
 #=================================================
-ynh_script_progression --message="Installing $app..." --weight=90
+ynh_script_progression --message="Installing $app..." --weight=60
 
 pushd $install_dir
  	ynh_use_nodejs
