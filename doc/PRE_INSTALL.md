@@ -1,0 +1,1 @@
+Please note, this package is only intended to test Etherpad with redis database. It should not be used for production.

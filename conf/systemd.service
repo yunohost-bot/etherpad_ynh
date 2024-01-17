@@ -1,12 +1,13 @@
 [Unit]
-Description=Etherpad-lite: Collaborative editor
-After=syslog.target network.target postgresql.service
+Description=Etherpad-lite: collaborative editor
+After=syslog.target network.target
 
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__INSTALL_DIR__
+WorkingDirectory=__INSTALL_DIR__/
+Environment=ETHERPAD_PRODUCTION=true
 Environment="NODE_ENV=production"
 Environment="__YNH_NODE_LOAD_PATH__"
 ExecStart=__INSTALL_DIR__/src/bin/run.sh
