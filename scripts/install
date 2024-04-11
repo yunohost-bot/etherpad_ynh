@@ -34,7 +34,7 @@ ynh_script_progression --message="Installing $app..." --weight=60
 
 pushd $install_dir
  	ynh_use_nodejs
- 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH src/bin/installDeps.sh
+ 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH bin/installDeps.sh
 popd
 
 #=================================================
@@ -109,12 +109,12 @@ chown $app:$app "$install_dir/credentials.json"
 #=================================================
 # INSTALL ETHERPAD
 #=================================================
-ynh_script_progression --message="Installing $app..." --weight=10
+#ynh_script_progression --message="Installing $app..." --weight=10
 
-pushd $install_dir
- 	ynh_use_nodejs
- 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true bin/installDeps.sh
-popd
+#pushd $install_dir
+# 	ynh_use_nodejs
+# 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true bin/installDeps.sh
+#popd
 
 #=================================================
 # START SYSTEMD SERVICE
