@@ -33,7 +33,7 @@ If you want to install Etherpad with plugins and mysql database: https://github.
 ## 文档与资源
 
 - 官方应用网站： <https://etherpad.org/>
-- 官方管理文档： <http://etherpad.org/doc/v1.9.3>
+- 官方管理文档： <https://etherpad.org/doc/v2.0.2/>
 - 上游应用代码库： <https://github.com/ether/etherpad-lite>
 - YunoHost 商店： <https://apps.yunohost.org/app/etherpad>
 - 报告 bug： <https://github.com/YunoHost-Apps/etherpad_ynh/issues>
