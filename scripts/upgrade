@@ -58,7 +58,7 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
-	ynh_setup_source --dest_dir="$install_dir" --keep="settings.json credentials.json"
+	ynh_setup_source --dest_dir="$install_dir" --full_replace=1 --keep="settings.json credentials.json"
 fi
 
 chmod -R o-rwx "$install_dir"
@@ -114,7 +114,8 @@ ynh_script_progression --message="Installing $app..." --weight=60
 
 pushd $install_dir
  	ynh_use_nodejs
- 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true src/bin/installDeps.sh
+ 	ynh_exec_warn_less npm install pnpm -g
+ 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true bin/installDeps.sh
 popd
 
 #=================================================
