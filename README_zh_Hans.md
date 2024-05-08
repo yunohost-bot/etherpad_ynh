@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Etherpad
+# YunoHost 上的 Etherpad
 
 [![集成程度](https://dash.yunohost.org/integration/etherpad.svg)](https://dash.yunohost.org/appci/app/etherpad) ![工作状态](https://ci-apps.yunohost.org/ci/badges/etherpad.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/etherpad.maintain.svg)
 
@@ -22,7 +22,7 @@ Be aware, Redis database backup and restore is not fully implemented.
 If you want to install Etherpad with plugins and mysql database: https://github.com/YunoHost-Apps/etherpad_mypads_ynh",
 
 
-**分发版本：** 2.0.2~ynh1
+**分发版本：** 2.0.3~ynh1
 
 **演示：** <https://video.etherpad.com/>
 
@@ -33,7 +33,7 @@ If you want to install Etherpad with plugins and mysql database: https://github.
 ## 文档与资源
 
 - 官方应用网站： <https://etherpad.org/>
-- 官方管理文档： <http://etherpad.org/doc/v1.9.3>
+- 官方管理文档： <https://etherpad.org/doc/v2.0.2/>
 - 上游应用代码库： <https://github.com/ether/etherpad-lite>
 - YunoHost 商店： <https://apps.yunohost.org/app/etherpad>
 - 报告 bug： <https://github.com/YunoHost-Apps/etherpad_ynh/issues>
