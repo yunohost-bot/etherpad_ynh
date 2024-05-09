@@ -16,7 +16,6 @@ ynh_script_progression --message="Restoring the app main directory..." --weight=
 
 ynh_restore_file --origin_path="$install_dir"
 
-# Restore permissions on app files
 chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
@@ -31,7 +30,6 @@ chown $app:$app "$install_dir/credentials.json"
 #=================================================
 ynh_script_progression --message="Reinstalling dependencies..." --weight=7
 
-# Install Nodejs
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
 pushd $install_dir

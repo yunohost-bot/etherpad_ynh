@@ -59,15 +59,12 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=3
 
-# Create a dedicated NGINX config
 ynh_add_nginx_config
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
-# Create a dedicated systemd config
 ynh_add_systemd_config
 
-# Use logrotate to manage app-specific logfile(s)
 ynh_use_logrotate --non-append
 
 yunohost service add $app --description="Collaborative editor" --log="/var/log/$app/$app.log"

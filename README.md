@@ -22,7 +22,7 @@ Be aware, Redis database backup and restore is not fully implemented.
 If you want to install Etherpad with plugins and mysql database: https://github.com/YunoHost-Apps/etherpad_mypads_ynh",
 
 
-**Shipped version:** 2.0.2~ynh1
+**Shipped version:** 2.0.3~ynh1
 
 **Demo:** <https://video.etherpad.com/>
 
@@ -33,7 +33,7 @@ If you want to install Etherpad with plugins and mysql database: https://github.
 ## Documentation and resources
 
 - Official app website: <https://etherpad.org/>
-- Official admin documentation: <http://etherpad.org/doc/v1.9.3>
+- Official admin documentation: <https://etherpad.org/doc/v2.0.2/>
 - Upstream app code repository: <https://github.com/ether/etherpad-lite>
 - YunoHost Store: <https://apps.yunohost.org/app/etherpad>
 - Report a bug: <https://github.com/YunoHost-Apps/etherpad_ynh/issues>

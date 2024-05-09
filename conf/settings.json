@@ -293,14 +293,6 @@
   "soffice": null,
 
   /*
-   * Path to the Tidy executable.
-   *
-   * Tidy is used to improve the quality of exported pads.
-   * Setting it to null disables Tidy.
-   */
-  "tidyHtml": null,
-
-  /*
    * Allow import of file types other than the supported ones:
    * txt, doc, docx, rtf, odt, html & htm
    */
@@ -504,7 +496,7 @@
   /*
    * Restrict socket.io transport methods
    */
-  "socketTransportProtocols" : ["xhr-polling", "jsonp-polling", "htmlfile"],
+  "socketTransportProtocols" : ["websocket", "polling"],
 
   "socketIo": {
     /*
@@ -627,5 +619,36 @@
   /*
    * Enable/Disable case-insensitive pad names.
    */
-  "lowerCasePadIds": false
+  "lowerCasePadIds": false,
+
+  "sso": {
+    "issuer": "${SSO_ISSUER:http://127.0.0.1:__PORT__}",
+      "clients": [
+        {
+          "client_id": "${ADMIN_CLIENT:admin_client}",
+          "client_secret": "${ADMIN_SECRET:admin}",
+          "grant_types": ["authorization_code"],
+          "response_types": ["code"],
+          "redirect_uris": ["${ADMIN_REDIRECT:http://127.0.0.1:__PORT__/admin/}"]
+        },
+        {
+          "client_id": "${USER_CLIENT:user_client}",
+          "client_secret": "${USER_SECRET:user}",
+          "grant_types": ["authorization_code"],
+          "response_types": ["code"],
+          "redirect_uris": ["${USER_REDIRECT:http://127.0.0.1:__PORT__/}"]
+        }
+      ]
+    }
+
+    /* Set the time to live for the tokens
+         This is the time of seconds a user is logged into Etherpad
+    "ttl":  {
+        "AccessToken": 3600,
+        "AuthorizationCode": 600,
+        "ClientCredentials": 3600,
+        "IdToken": 3600,
+        "RefreshToken": 86400
+    }
+    */
 }
