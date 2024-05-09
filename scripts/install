@@ -80,9 +80,9 @@ ynh_script_progression --message="Installing $app..." --weight=10
 
 pushd $install_dir
     ynh_use_nodejs
-    corepack enable
-    corepack prepare pnpm@latest --activate
- 	ynh_exec_warn_less ynh_exec_as $app bin/installDeps.sh
+    ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack enable
+    ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
+ 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH bin/installDeps.sh
 popd
 
 #=================================================
