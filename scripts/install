@@ -82,7 +82,9 @@ pushd $install_dir
     ynh_use_nodejs
     ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack enable
     ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
- 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH bin/installDeps.sh
+    ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm install --recursive --production
+    rm -f var/minified*
+ 	#ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH bin/installDeps.sh
 popd
 
 #=================================================
