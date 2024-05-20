@@ -17,7 +17,7 @@ admindoc = "https://etherpad.org/doc/v2.0.2/"
 code = "https://github.com/ether/etherpad-lite"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 11.2.12"
 architectures = "all"
 multi_instance = true
 
@@ -82,14 +82,13 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = ""
-    
+
     packages_from_raw_bash = """
           if [[ "$export" == "libreoffice" ]]
-          then 
+          then
               echo "unoconv libreoffice-writer"
           elif [[ "$export" == "abiword" ]]
           then
               echo "abiword"
           fi
     """
-    
