@@ -101,7 +101,8 @@ ynh_script_progression --message="Installing $app..." --weight=60
 
 pushd $install_dir
  	ynh_use_nodejs
- 	ynh_exec_warn_less npm install pnpm -g
+    env $ynh_node_load_PATH corepack enable
+    env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
  	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true bin/installDeps.sh
 popd
 
