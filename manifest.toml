@@ -82,14 +82,13 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = ""
-    
+
     packages_from_raw_bash = """
           if [[ "$export" == "libreoffice" ]]
-          then 
+          then
               echo "unoconv libreoffice-writer"
           elif [[ "$export" == "abiword" ]]
           then
               echo "abiword"
           fi
     """
-    
