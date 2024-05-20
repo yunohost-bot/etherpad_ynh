@@ -80,7 +80,6 @@ ynh_script_progression --message="Installing $app..." --weight=10
 
 pushd $install_dir
     ynh_use_nodejs
-    npm install typescript -g
     env $ynh_node_load_PATH corepack enable
     env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
     env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true bin/installDeps.sh
