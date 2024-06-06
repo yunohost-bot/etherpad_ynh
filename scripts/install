@@ -82,7 +82,7 @@ pushd $install_dir
     ynh_use_nodejs
     env $ynh_node_load_PATH corepack enable
     env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
-    env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true bin/installDeps.sh
+    env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true COREPACK_ENABLE_DOWNLOAD_PROMPT=0 bin/installDeps.sh
     #ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm install --recursive --production
 popd
 
