@@ -32,9 +32,9 @@ ynh_script_progression --message="Reinstalling dependencies..." --weight=7
 
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
-pushd $install_dir
- 	ynh_use_nodejs
-    ynh_exec_warn_less npm install pnpm -g
+pushd "$install_dir"
+    ynh_use_nodejs
+    ynh_exec_warn_less env $ynh_node_load_PATH corepack enable && COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack prepare pnpm@latest --activate
 popd
 
 #=================================================
