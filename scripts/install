@@ -85,8 +85,6 @@ pushd $install_dir
 popd
 
 pushd $install_dir/admin
-    ynh_use_nodejs
-
     ynh_exec_warn_less env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true COREPACK_ENABLE_DOWNLOAD_PROMPT=0 pnpm install && pnpm run build-copy
 popd
 
