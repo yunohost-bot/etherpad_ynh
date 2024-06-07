@@ -17,7 +17,7 @@ ynh_script_progression --message="Installing dependencies..." --weight=6
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
 #=================================================
-# CREATE A POSTQRESQL DATABASE
+# CREATE REDIS DATABASE
 #=================================================
 ynh_script_progression --message="Creating a Redis database..." --weight=5
 
