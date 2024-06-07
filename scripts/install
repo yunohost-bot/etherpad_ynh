@@ -84,6 +84,12 @@ pushd $install_dir
     ynh_exec_warn_less env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true COREPACK_ENABLE_DOWNLOAD_PROMPT=0 bin/installDeps.sh
 popd
 
+pushd $install_dir/admin
+    ynh_use_nodejs
+
+    ynh_exec_warn_less env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true COREPACK_ENABLE_DOWNLOAD_PROMPT=0 pnpm build-copy
+popd
+
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
