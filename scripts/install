@@ -84,10 +84,6 @@ pushd $install_dir
     ynh_exec_warn_less env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true pnpm --recursive i --production
 popd
 
-#pushd $install_dir/admin
-#    ynh_exec_warn_less env $ynh_node_load_PATH ETHERPAD_PRODUCTION=true pnpm install && pnpm run build-copy
-#popd
-
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
