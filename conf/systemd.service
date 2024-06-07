@@ -9,6 +9,7 @@ Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 Environment="NODE_ENV=production"
 Environment="__YNH_NODE_LOAD_PATH__"
+Environment="ETHERPAD_PRODUCTION=true"
 ExecStart=__INSTALL_DIR__/bin/run.sh
 Restart=always
 StandardOutput=append:/var/log/etherpad/etherpad.log
