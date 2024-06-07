@@ -12,8 +12,8 @@ Environment="__YNH_NODE_LOAD_PATH__"
 Environment="ETHERPAD_PRODUCTION=true"
 ExecStart=__INSTALL_DIR__/bin/run.sh
 Restart=always
-StandardOutput=append:/var/log/etherpad/etherpad.log
-StandardError=inherit
+#StandardOutput=append:/var/log/etherpad/etherpad.log
+#StandardError=inherit
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these 
