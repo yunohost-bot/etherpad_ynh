@@ -84,14 +84,17 @@ pushd $install_dir
     ynh_exec_warn_less env $ynh_node_load_PATH pnpm --recursive i --production
 popd
 
+pushd $install_dir/admin
+    ynh_exec_warn_less env $ynh_node_load_PATH pnpm run build
+    cp ./dist/* ../src/templates/admin
+popd
+
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=6
 
 ynh_systemd_action --service_name=$app --action=restart --log_path=systemd --line_match="Your Etherpad version is"
-
-ynh_secure_remove --file="$install_dir/var/minified*"
 
 #=================================================
 # END OF SCRIPT
