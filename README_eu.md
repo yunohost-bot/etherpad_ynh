@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Etherpad YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/etherpad.svg)](https://dash.yunohost.org/appci/app/etherpad) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/etherpad.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/etherpad.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/etherpad.svg)](https://ci-apps.yunohost.org/ci/apps/etherpad/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/etherpad.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/etherpad.maintain.svg)
 
 [![Instalatu Etherpad YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=etherpad)
 
