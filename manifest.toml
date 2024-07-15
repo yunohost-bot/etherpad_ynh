@@ -81,7 +81,7 @@ ram.runtime = "50M"
     admin.show_tile = false
 
     [resources.apt]
-    packages = ""
+    packages = "redis-server"
 
     packages_from_raw_bash = """
           if [[ "$export" == "libreoffice" ]]
