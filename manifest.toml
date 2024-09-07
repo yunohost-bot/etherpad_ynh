@@ -5,7 +5,7 @@ name = "Etherpad"
 description.en = "Collaborative editing in real-time"
 description.fr = "Édition collaborative en temps réel"
 
-version = "2.2.2~ynh1"
+version = "2.2.3~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -17,7 +17,7 @@ admindoc = "https://etherpad.org/doc/v2.0.2/"
 code = "https://github.com/ether/etherpad-lite"
 
 [integration]
-yunohost = ">= 11.2.29"
+yunohost = ">= 11.2.30.1"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
@@ -64,8 +64,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/ether/etherpad-lite/archive/refs/tags/2.2.2.tar.gz"
-        sha256 = "9e7fe5c3cae0adac95b6ae45fd7febea38d2c2fcb5ccaccf47235fe1f239480f"
+        url = "https://github.com/ether/etherpad-lite/archive/refs/tags/2.2.3.tar.gz"
+        sha256 = "3cec9cee8930b880272a73967522388a35b2066535ea00ce143a1e5262d6cba2"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
